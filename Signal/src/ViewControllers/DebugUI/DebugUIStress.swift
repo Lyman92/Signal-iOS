@@ -144,7 +144,7 @@ public extension DebugUIStress {
 
         firstly { () -> Promise<Void> in
             return GroupManager.messageProcessingPromise(for: oldGroupModel,
-                                                         description: self.logTag)
+                                                         description: "DebugUIStress")
         }.then(on: .global()) { _ in
             // dmConfiguration: nil means don't change disappearing messages configuration.
             GroupManager.localUpdateExistingGroup(oldGroupModel: oldGroupModel,

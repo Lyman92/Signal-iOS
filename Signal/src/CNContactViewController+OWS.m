@@ -18,9 +18,10 @@
         // presents the discard action sheet behind the keyboard.
         // We swizzle the cancel callback and force the keyboard to
         // dismiss.
-        if (@available(iOS 14, *)) {
-            OWSFailDebug(@"Check if this is still needed.");
-        } else if (@available(iOS 13, *)) {
+//        if (@available(iOS 14, *)) {
+//            OWSFailDebug(@"Check if this is still needed.");
+//        } else
+            if (@available(iOS 13, *)) {
             SEL originalSelector = @selector(editCancel:);
             SEL swizzledSelector = @selector(ows_editCancel:);
 
